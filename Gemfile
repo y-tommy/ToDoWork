@@ -58,3 +58,5 @@ gem "devise"
 gem 'devise-bootstrap-views'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'rails-i18n', '~> 6.0'
+gem 'devise-i18n'
