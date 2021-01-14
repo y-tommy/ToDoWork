@@ -1,0 +1,6 @@
+ユーザーを招待
+<% form_with(model: @group, method: :post) do |f| %>
+  <%= f.hidden_field :user_id, :value => @user.id %>
+  <%= f.collection_select(:group_id, @groups, :id, :name) %>
+  <%= f.submit '参加' %>
+<% end %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :groups
+  get '/groups/join' => 'groups#join'
   root to: "tasks#index"
   resources :tasks
   devise_for :users

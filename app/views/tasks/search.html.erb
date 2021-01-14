@@ -1,0 +1,16 @@
+<p>検索</p>
+<%= form_with url: tasks_path, method: :get, local: true do |f| %>
+  <%= f.text_field :search %>
+  <%= f.submit '検索', name: nil %>
+<% end %>
+
+<ul><% @tasks.each do |task| %>
+  <li>
+    <%= link_to task.title, post %>
+    <%= task.created_at %>
+    <%= task.status %>
+  </li>
+  <%= link_to "編集",edit_task_path(task) %>
+  <%= link_to "削除",task, method: :delete %>
+  <% end %>
+</ul>

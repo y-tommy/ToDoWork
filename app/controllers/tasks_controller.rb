@@ -66,6 +66,10 @@ class TasksController < ApplicationController
     end
   end
 
+  def search
+    @tasks = Task.search(params[:search])
+  end
+
   private
     def target_task task_id
       current_user.tasks.where(id: task_id).take
